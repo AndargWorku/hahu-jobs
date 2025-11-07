@@ -4,23 +4,23 @@
          :class="{ 'z-40': true }" 
         @click.self="handleClose"
     >
-        <div class="bg-white rounded-md w-full max-w-11/12 h-auto max-h-[90vh] 
+        <div class="bg-white dark:bg-[#1B2637]  rounded-md w-full max-w-11/12 h-auto max-h-[90vh] 
         overflow-y-auto transform transition-all duration-300 scale-100">
             <div class="px-4 py-2 md:px-8 md:py-4 lg:px-12 lg:py-6 font-sans">
                 
-                <header class="flex justify-between items-center
+                <header class="flex justify-between items-center dark:bg-[#1B2637]
                   top-[-1rem] sm:top-[-2rem] bg-white z-10  sm:py-4 -mx-4 md:-mx-4 lg:-mx-8 px-2
-                  md:px-6 lg:px-8 mb-6"> <!-- ADDED: mb-6 (margin-bottom: 1.5rem/24px) -->
-                    <div class="flex items-center space-x-4">
-                        <button aria-label="Close" class="text-gray-400 hover:bg-[#E6F5F3]  rounded-sm" @click="handleClose">
+                  md:px-6 lg:px-8 mb-6"> 
+                    <div class="flex items-center space-x-4  dark:bg-[#1B2637]">
+                        <button aria-label="Close" class="text-gray-400  hover:bg-[#E6F5F3] dark:bg-[#1B2637]  rounded-sm" @click="handleClose">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <h1 class="text-lg font-semibold text-gray-800">Jobs by sector</h1>
+                        <h1 class="text-lg font-semibold text-gray-800 dark:text-white dark:bg-[#1B2637]">Jobs by sector</h1>
                     </div>
                     
-                    <NuxtLink to="/view-all" class="flex items-center space-x-2 bg-white
+                    <NuxtLink to="/view-all" class="flex items-center space-x-2 dark:bg-[#1B2637] bg-white
                      text-teal-500 border border-[#009688] px-1 py-2 
                      rounded-md font-medium  hover:bg-[#009688]  hover:text-white ">
                         <span>View All</span>
@@ -39,7 +39,7 @@
                         :key="sector.id" 
                         :to="`/jobs/${sector.id}`"
                         :class="[
-                            'group rounded-md p-5 border cursor-pointer bg-[#F1F1F1] border-gray-100 hover:bg-[#E6F5F3]  transition-all duration-200 block text-decoration-none relative',
+                            'group rounded-md p-5 border cursor-pointer dark:bg-[#444F60] bg-[#F1F1F1] border-gray-100 hover:bg-[#E6F5F3]  transition-all duration-200 block text-decoration-none relative',
                            
                         ]"
                     >
@@ -48,7 +48,7 @@
                              
                                 <div 
                                     :class="[
-                                        'flex-shrink-0 w-8 h-8 flex items-center  rounded-lg',
+                                        'flex-shrink-0 w-8 h-8 flex items-center  rounded-lg dark:bg-[#444F60] ',
                                         'bg-[#E6F5F3] text-teal-600'
                                     ]"
                                 >
@@ -69,7 +69,7 @@
                                 <div class="min-w-0">
                                     <div class="flex items-baseline space-x-2"> 
                                       
-                                        <h3 class="text-base font-semibold text-gray-800 flex-shrink-0 whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <h3 class="text-base font-semibold dark:text-white text-gray-800 flex-shrink-0 whitespace-nowrap overflow-hidden text-ellipsis">
                                             {{ sector.name }}
                                         </h3>
                                         
@@ -83,7 +83,7 @@
                                     </div>
                                     
                                     
-                                    <p class="mt-1 text-sm text-gray-500 line-clamp-2">
+                                    <p class="mt-1 text-sm text-gray-500 line-clamp-2 dark:text-white">
                                         {{ sector.description }}
                                     </p>
                                 </div>
